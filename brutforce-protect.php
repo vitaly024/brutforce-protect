@@ -25,10 +25,10 @@ register_activation_hook(__FILE__ , 'bfp_activate' );
 //register_deactivation_hook(__FILE__ , 'bfp_deactivate' );
 register_uninstall_hook(__FILE__ , 'bfp_uninstall');
 
-if (!isset($alt_link2) ){ //если не установлено в файле wp-config
-	$alt_link2 = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME); 
-	$alt_link2->query('set names utf8');
-	$alt_link2->query("set lc_time_names='ru_RU'");
+if (!isset($alt_link) ){ //если не установлено в файле wp-config
+	$alt_link = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME); 
+	$alt_link->query('set names utf8');
+	$alt_link->query("set lc_time_names='ru_RU'");
 }
 
 //после логина переброс на главную страницу
